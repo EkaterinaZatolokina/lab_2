@@ -1,9 +1,23 @@
 package geometry2d;
 
+import exceptions.RadiusException;
+
 public class Circle implements Figure{
     private double radius = 0;
 
-    public Circle(double radius) {
+    public Circle(double radius) throws RadiusException {
+        if (radius <= 0)
+            throw new RadiusException();
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) throws RadiusException{
+        if (radius <= 0)
+            throw new RadiusException();
         this.radius = radius;
     }
 
@@ -16,6 +30,6 @@ public class Circle implements Figure{
     }
 
     public String toString() {
-        return "Circle (radius: " + this.radius + ")";
+        return "Circle (radius: " + this.radius + ", Perimeter: " + this.perimeter() +", Area: " + this.area() +")";
     }
 }
