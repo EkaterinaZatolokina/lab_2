@@ -54,7 +54,7 @@ public class Main {
 
         }
         try{
-            Rectangle rectangle = new Rectangle(2.54, -3.86);
+            Rectangle rectangle = new Rectangle(2.54, 3.86);
             System.out.println(rectangle);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -65,14 +65,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        /**System.out.println("Area: " + circle.area());
-        System.out.println("Perimeter: " + circle.perimeter());
-        System.out.println(rectangle);
-        System.out.println("Area: " + rectangle.area());
-        System.out.println("Perimeter: " + rectangle.perimeter());
-        Cylinder cylinder = new Cylinder(circle, (double)10.0F);
-        System.out.println(cylinder);
-        System.out.println("Volume: " + cylinder.volume());**/
+       
 
     }
 }
