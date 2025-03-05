@@ -1,6 +1,5 @@
 package geometry3d;
 
-import exceptions.AreaException;
 import geometry2d.Figure;
 
 public class Cylinder {
@@ -12,20 +11,16 @@ public class Cylinder {
         this.height = height;
     }
 
-    public double volume() throws AreaException{
-        if (this.base.area() * this.height <= 5)
-            throw new AreaException();
+    public double volume() {
+
         return this.base.area() * this.height;
     }
 
     public String toString() {
         String var10000 = this.base.toString();
         String res = "";
-        try {
-            res =  "Cylinder (base: " + var10000 + ", height: " + this.height + ", Volume: " + this.volume() + ")";
-        } catch (AreaException e) {
-            System.out.println(e);
-        }
+        res =  "Cylinder (base: " + var10000 + ", height: " + this.height + ", Volume: " + this.volume() + ")";
+
         return res;
     }
 }

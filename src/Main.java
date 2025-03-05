@@ -54,12 +54,10 @@ public class Main {
 
         }
         try{
-            Rectangle rectangle = new Rectangle(2.54, 3.86);
+            Rectangle rectangle = new Rectangle(2.54, -3.86);
             System.out.println(rectangle);
-        } catch (HeightException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
-        } catch (WidthException e) {
-            e.getMessage();
         }
         try{
             Cylinder cylinder  = new Cylinder(new Circle(2.37), 5.56);
